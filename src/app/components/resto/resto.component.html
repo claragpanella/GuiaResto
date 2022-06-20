@@ -1,0 +1,75 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col">
+            <p class="h3 text-dark fw-bold">Restaurantes
+                <a class="btn btn-danger btn-sm" routerLink="/restos/add">
+                    <i class="fa-solid fa-plus"></i>
+                    Agregar
+                </a>
+            </p>
+            <p class="fw-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, eaque. Aliquid, amet
+                cumque temporibus
+                odit provident,
+                aliquam iste necessitatibus animi qui sint doloremque voluptates natus excepturi consequuntur, rerum
+                aspernatur magni!
+            </p>
+            <form action="">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Buscar Restaurante">
+                            </div>
+                            <div class="col">
+                                <input type="submit" class="btn btn-dark" value="Buscar">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Cards -->
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card list-group-item-flush">
+                <div class="card-body">
+                    <div class="row align-items-center">
+
+                        <div class="col-sm-4 mb-2">
+                            <img alt="" src="https://mendoza.travel/wp-content/uploads/mariaantonieta-mendoza-001.jpg"
+                                class="resto-img">
+                        </div>
+
+                        <div class="col-sm-7">
+                            <ul class="list-group">
+                                <li class="list-group-item">Nombre: <span class="fw-bold">Nombre</span></li>
+                                <li class="list-group-item">Teléfono: <span class="fw-bold">Teléfono</span></li>
+                                <li class="list-group-item">Dirección: <span class="fw-bold">Dirección</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-sm-1 d-flex flex-column justify-content-center align-items-center">
+                            <a routerLink="/restos/view/:restoId" class="btn btn-success m-1">
+                                <i class="fa-regular fa-eye"></i>
+                            </a>
+
+                            <a routerLink="/restos/edit/:restoId" class="btn btn-primary m-1">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </a>
+
+                            <button class="btn btn-danger m-1">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
