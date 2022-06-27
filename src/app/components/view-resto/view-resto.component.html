@@ -1,7 +1,7 @@
 <div class="container mt-3">
     <div class="row">
         <div class="col">
-            <p class="h3 fw-bold text-dark">Ver Restaurante</p>
+            <p class="h3 fw-bold text-dark">{{resto.name}}</p>
             <p class="fw-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nobis ab voluptate
                 quo, ex dicta
                 corporis recusandae hic labore modi deserunt provident! Eligendi ipsum quo possimus repudiandae modi,
@@ -13,19 +13,19 @@
 
 <!-- Info -->
 
-<div class="container">
+<div *ngIf="!loading && isNotEmpty()" class="container">
     <div class="row align-items-center">
         <!-- <div class="col mb-3">
             <img src="https://mendoza.travel/wp-content/uploads/mariaantonieta-mendoza-001.jpg" class="resto-img-view" alt="">
         </div> -->
         <div class="col-sm-6">
             <ul class="list-group">
-                <li class="list-group mb-2"><img src="https://mendoza.travel/wp-content/uploads/mariaantonieta-mendoza-001.jpg" class="resto-img-view" alt=""></li>
-                <li class="list-group-item list-group-item-light">Nombre: <span class="fw-bold">Nombre</span></li>
-                <li class="list-group-item list-group-item-light">Teléfono: <span class="fw-bold">Teléfono</span></li>
-                <li class="list-group-item list-group-item-light">Dirección: <span class="fw-bold">Dirección</span></li>
-                <li class="list-group-item list-group-item-light">Email: <span class="fw-bold">Email</span></li>
-                <li class="list-group-item list-group-item-light">Categoría: <span class="fw-bold">Categoría</span></li>
+                <li class="list-group mb-2"><img [src]="resto.photo" class="resto-img-view" alt=""></li>
+                <li class="list-group-item list-group-item-light">Nombre: <span class="fw-bold">{{resto.name}}</span></li>
+                <li class="list-group-item list-group-item-light">Teléfono: <span class="fw-bold">{{resto.mobile}}</span></li>
+                <li class="list-group-item list-group-item-light">Dirección: <span class="fw-bold">{{resto.address}}</span></li>
+                <li class="list-group-item list-group-item-light">Email: <span class="fw-bold">{{resto.email}}</span></li>
+                <li class="list-group-item list-group-item-light">Categoría: <span class="fw-bold">{{resto.category}}</span></li>
             </ul>
         </div>
         <div class="row mt-2">

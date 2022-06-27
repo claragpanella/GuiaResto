@@ -1,0 +1,70 @@
+{
+  "restos": [
+    {
+      "id": "BFFpnLmHNl",
+      "name": "La Gloria Cantina",
+      "email": "gloriacantina@gmail.com",
+      "photo": "https://www.cadena3.com/admin/playerswf/fotos/ARCHI_896706.jpg",
+      "mobile": "2627453741",
+      "address": "Mitre 1541, Chacras de Coria, Mendoza",
+      "category": "Restaurante",
+      "groupdId": "1"
+    },
+    {
+      "id": "FtwfOTDIqo",
+      "name": "La Marchigiana",
+      "email": "marchigiana@gmail.com",
+      "photo": "https://lh3.googleusercontent.com/p/AF1QipNDe4NsB-mFn9aCL39iHRPWxF53ljwBeL2doUn8=w1024-k",
+      "mobile": "2614391961",
+      "address": "Palmares Open Mall, Godoy Cruz, Mendoza",
+      "category": "Restaurante",
+      "groupdId": "2"
+    },
+    {
+      "id": "CLndRwIIdH",
+      "name": "La Social",
+      "email": "lasocial@gmail.com",
+      "photo": "https://vinosybuenvivir.com/wp-content/uploads/2022/05/local-la-social-2.jpeg",
+      "mobile": "2617602726",
+      "address": "San Martín 1698, Godoy Cruz, Mendoza",
+      "category": "Pizzería",
+      "groupdId": "3"
+    },
+    {
+      "id": "bVxBQRPHxN",
+      "name": "Modesto Civit",
+      "email": "modestocivit@gmail.com",
+      "photo": "https://10619-2.s.cdn12.com/rests/original/103_510101205.jpg",
+      "mobile": "2615604206",
+      "address": "Granaderos 1093, Mendoza",
+      "category": "Cafetería",
+      "groupdId": "4"
+    }
+  ],
+  "groups": [
+    {
+      "id": "1",
+      "name": "Colleague"
+    },
+    {
+      "id": "2",
+      "name": "Friend"
+    },
+    {
+      "id": "3",
+      "name": "Family"
+    },
+    {
+      "id": "4",
+      "name": "Service"
+    },
+    {
+      "id": "5",
+      "name": "Community"
+    },
+    {
+      "id": "6",
+      "name": "Social"
+    }
+  ]
+}

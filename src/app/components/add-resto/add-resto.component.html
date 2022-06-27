@@ -11,29 +11,39 @@
     </div>
 </div>
 
+<!-- Mensaje de Error -->
+<div *ngIf="!loading && errorMessage">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="h4-text-danger fw-bold">{{errorMessage}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Agregar -->
 <div class="container">
     <div class="row">
         <div class="col-sm-5">
-            <form action="">
+            <form (submit)="createSubmit()">
                 <div class="mb-2">
-                    <input type="text" class="form-control" placeholder="Nombre">
+                    <input required="true" [(ngModel)]="resto.name" name="name" type="text" class="form-control" placeholder="Nombre">
                 </div>
                 <div class="mb-2">
-                    <input type="text" class="form-control" placeholder="URL de la foto">
+                    <input required="true" [(ngModel)]="resto.photo" name="photo" type="text" class="form-control" placeholder="URL de la foto">
                 </div>
                 <div class="mb-2">
-                    <input type="email" class="form-control" placeholder="Email">
+                    <input required="true" [(ngModel)]="resto.email" name="email" type="email" class="form-control" placeholder="Email">
                 </div>
                 <div class="mb-2">
-                    <input type="phone" class="form-control" placeholder="Teléfono">
+                    <input required="true" [(ngModel)]="resto.mobile" name="mobile" type="phone" class="form-control" placeholder="Teléfono">
                 </div>
                 <div class="mb-2">
-                    <input type="text" class="form-control" placeholder="Dirección">
+                    <input required="true" [(ngModel)]="resto.address" name="address" type="text" class="form-control" placeholder="Dirección">
                 </div>
                 <div class="mb-2">
-                    <select name="" id="" class="form-control">
-                        <option value="hidden">Seleccionar una categoría</option>
+                    <select required="true" [(ngModel)]="resto.category" name="category" id="" class="form-control">
                         <option value="Bar">Bar</option>
                         <option value="Restaurante">Restaurante</option>
                         <option value="Cafetería">Cafetería</option>
@@ -50,7 +60,7 @@
             </form>
         </div>
         <div class="col-sm-4">
-            <img src="https://mendoza.travel/wp-content/uploads/mariaantonieta-mendoza-001.jpg" class="resto-img-add"
+            <img [src]="resto.photo" class="resto-img-add"
                 alt="">
         </div>
     </div>

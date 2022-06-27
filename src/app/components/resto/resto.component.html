@@ -31,37 +31,52 @@
     </div>
 </div>
 
+<!-- Loading Spinner
+<div *ngIf="loading">
+    <app-spinner></app-spinner>
+</div> -->
+
+<!-- Mensaje de Error -->
+<div *ngIf="!loading && errorMessage">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="h4-text-danger fw-bold">{{errorMessage}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Cards -->
-<div class="container mt-3">
+<div *ngIf="!loading && restos.length > 0" class="container mt-3">
     <div class="row">
-        <div class="col-md-6">
-            <div class="card list-group-item-flush">
+        <div *ngFor="let resto of restos" class="col-md-6">
+            <div class="card list-group-item-flush my-2">
                 <div class="card-body">
                     <div class="row align-items-center">
-
                         <div class="col-sm-4 mb-2">
-                            <img alt="" src="https://mendoza.travel/wp-content/uploads/mariaantonieta-mendoza-001.jpg"
+                            <img [src]="resto.photo" alt="" src="https://mendoza.travel/wp-content/uploads/mariaantonieta-mendoza-001.jpg"
                                 class="resto-img">
                         </div>
 
                         <div class="col-sm-7">
                             <ul class="list-group">
-                                <li class="list-group-item">Nombre: <span class="fw-bold">Nombre</span></li>
-                                <li class="list-group-item">Teléfono: <span class="fw-bold">Teléfono</span></li>
-                                <li class="list-group-item">Dirección: <span class="fw-bold">Dirección</span></li>
+                                <li class="list-group-item">Nombre: <span class="fw-bold">{{resto.name}}</span></li>
+                                <li class="list-group-item">Teléfono: <span class="fw-bold">{{resto.mobile}}</span></li>
+                                <li class="list-group-item">Dirección: <span class="fw-bold">{{resto.address}}</span></li>
                             </ul>
                         </div>
 
                         <div class="col-sm-1 d-flex flex-column justify-content-center align-items-center">
-                            <a routerLink="/restos/view/:restoId" class="btn btn-success m-1">
+                            <a routerLink="/restos/view/{{resto.id}}" class="btn btn-success m-1">
                                 <i class="fa-regular fa-eye"></i>
                             </a>
 
-                            <a routerLink="/restos/edit/:restoId" class="btn btn-primary m-1">
+                            <a routerLink="/restos/edit/{{resto.id}}" class="btn btn-primary m-1">
                                 <i class="fa-regular fa-pen-to-square"></i>
                             </a>
 
-                            <button class="btn btn-danger m-1">
+                            <button class="btn btn-danger m-1" (click)="clickDeleteContact(resto.id)">
                                 <i class="fa-regular fa-trash-can"></i>
                             </button>
 
